@@ -17,5 +17,6 @@ function currentLine(line){
   for (let i=0; i<line.length; i++){
     message += (i+1)+". "+line[i]+", ";
   }
+  message.slice(0,-2)
   return message;
 }
