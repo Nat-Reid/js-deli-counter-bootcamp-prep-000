@@ -17,6 +17,9 @@ function currentLine(line){
   for (let i=0; i<line.length; i++){
     message += (i+1)+". "+line[i]+", ";
   }
-  message = message.slice(0,-2) //gets rid of extra ", "
+  message = message.slice(0,-2) //gets rid of extra ", " or ": " if line is empty
+  if (line.isempty()){
+    message += " empty."
+  }
   return message;
 }
