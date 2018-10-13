@@ -4,7 +4,7 @@ function takeANumber(line, customer){
   return message;
 }
 function nowServing(line){
-  if (line.size>0){
+  if (line.length>0){
     var serving = line.shift();
     return serving;
   }
@@ -17,7 +17,7 @@ function currentLine(line){
   for (let i=0; i<line.length; i++){
     message += (i+1)+". "+line[i]+", ";
   }
-  message = message.slice(0,-2) //gets rid of extra ", " or ": " if line is empty
+  message = message.slice(0,-2)//gets rid of extra ", " or ": " if line is empty
   if (line.length === 0){
     message += " empty."
   }
